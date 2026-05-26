@@ -3040,7 +3040,424 @@ img[loading="lazy"]{
   .detailTrust{grid-template-columns:1fr!important}
 }
 
+
+/* v59 targeted homepage trust proof section only */
+.homeProofSection{
+  padding:52px 48px 34px;
+  background:linear-gradient(180deg,#fffdf8,#f6efe4);
+}
+.homeProofHead{
+  display:flex;
+  justify-content:space-between;
+  gap:24px;
+  align-items:flex-end;
+  margin-bottom:24px;
+}
+.homeProofHead h2{
+  font-size:50px;
+  line-height:.95;
+}
+.homeProofHead p{
+  max-width:640px;
+  font-size:16px;
+}
+.homeProofGrid{
+  display:grid;
+  grid-template-columns:1.25fr .9fr .75fr;
+  gap:18px;
+  align-items:stretch;
+}
+.proofCard{
+  background:var(--paper);
+  border:1px solid var(--line);
+  border-radius:22px;
+  overflow:hidden;
+  box-shadow:0 18px 44px rgba(6,56,45,.08);
+}
+.proofCardText{
+  padding:18px;
+}
+.proofCardText h3{
+  font-size:30px;
+  line-height:1;
+}
+.proofCardText p{
+  font-size:14px;
+  margin-top:7px;
+}
+.proofImage{
+  width:100%;
+  height:310px;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+  background:#fffdf8;
+}
+.proofImage.contain{
+  object-fit:contain;
+  padding:18px;
+}
+.reviewProofWrap{
+  display:grid;
+  grid-template-rows:auto 1fr;
+}
+.nammProof{
+  display:grid;
+  place-items:center;
+  min-height:310px;
+  padding:26px;
+}
+.nammProof img{
+  width:100%;
+  max-width:260px;
+  height:auto;
+  object-fit:contain;
+}
+.proofBadgeLine{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+  margin-top:18px;
+}
+.proofBadgeLine div{
+  background:#06382d;
+  color:white;
+  border-radius:16px;
+  padding:16px;
+  text-align:center;
+}
+.proofBadgeLine b{
+  display:block;
+  color:#ead08e;
+  font-size:15px;
+}
+.proofBadgeLine span{
+  display:block;
+  font-size:13px;
+  color:rgba(255,255,255,.82);
+  margin-top:3px;
+}
+@media(max-width:980px){
+  .homeProofSection{padding:34px 20px}
+  .homeProofHead{display:block}
+  .homeProofHead h2{font-size:38px}
+  .homeProofHead p{margin-top:10px}
+  .homeProofGrid{grid-template-columns:1fr}
+  .proofImage{height:auto;max-height:360px}
+  .proofBadgeLine{grid-template-columns:1fr}
+}
+
+
+/* v60 targeted homepage authority + recent-install ticker only */
+.nationwideStamp{
+  position:absolute;
+  left:18px;
+  top:18px;
+  z-index:6;
+  width:178px;
+  height:178px;
+  border-radius:999px;
+  background:
+    radial-gradient(circle at 50% 50%,rgba(255,253,248,.96) 0 49%,transparent 50%),
+    conic-gradient(from 0deg,#c4a05c,#ead08e,#c4a05c,#94743d,#c4a05c);
+  display:grid;
+  place-items:center;
+  text-align:center;
+  box-shadow:0 18px 40px rgba(0,0,0,.24);
+  border:5px solid rgba(255,253,248,.88);
+}
+.nationwideStamp:before{
+  content:"";
+  position:absolute;
+  inset:13px;
+  border-radius:999px;
+  border:2px dashed #c4a05c;
+}
+.nationwideStamp strong{
+  display:block;
+  color:var(--green);
+  font-family:Georgia,serif;
+  font-size:22px;
+  line-height:.95;
+  position:relative;
+}
+.nationwideStamp span{
+  display:block;
+  color:#6c5428;
+  font-size:10px;
+  text-transform:uppercase;
+  letter-spacing:.13em;
+  font-weight:900;
+  margin-top:6px;
+  position:relative;
+}
+.heroInstallTicker{
+  position:absolute;
+  right:18px;
+  bottom:18px;
+  z-index:7;
+  width:min(420px,82%);
+  background:rgba(255,253,248,.96);
+  border:1px solid rgba(234,208,142,.62);
+  border-radius:20px;
+  padding:14px;
+  box-shadow:0 22px 48px rgba(0,0,0,.24);
+  cursor:pointer;
+  backdrop-filter:blur(12px);
+}
+.heroInstallTicker:hover{
+  transform:translateY(-2px);
+  transition:.18s ease;
+}
+.heroInstallTicker .tickerTop{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin-bottom:9px;
+}
+.heroInstallTicker .tickerTop b{
+  color:var(--green);
+  font-size:13px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.heroInstallTicker .tickerTop span{
+  color:#94743d;
+  font-size:12px;
+  font-weight:900;
+}
+.heroInstallTicker .tickerMain{
+  display:grid;
+  grid-template-columns:76px 1fr;
+  gap:12px;
+  align-items:center;
+}
+.heroInstallTicker img{
+  width:76px;
+  height:64px;
+  border-radius:14px;
+  object-fit:cover;
+  background:#f3eadb;
+}
+.heroInstallTicker h3{
+  font-size:24px;
+  line-height:1;
+  margin:0;
+}
+.heroInstallTicker p{
+  color:#5f6c65;
+  font-size:13px;
+  margin-top:4px;
+}
+.heroInstallTicker small{
+  display:block;
+  color:var(--green);
+  margin-top:7px;
+  font-weight:900;
+}
+.homeNationwideLine{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  margin-top:20px;
+  color:#ead08e;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(234,208,142,.22);
+  border-radius:999px;
+  padding:10px 14px;
+  font-weight:850;
+}
+.homeNationwideLine i{
+  font-style:normal;
+  width:26px;
+  height:26px;
+  border-radius:999px;
+  background:#ead08e;
+  color:var(--green);
+  display:grid;
+  place-items:center;
+  font-weight:950;
+}
+@media(max-width:980px){
+  .nationwideStamp{width:132px;height:132px}
+  .nationwideStamp strong{font-size:17px}
+  .nationwideStamp span{font-size:8px}
+  .heroInstallTicker{
+    position:relative;
+    right:auto;
+    bottom:auto;
+    width:100%;
+    margin-top:14px;
+  }
+}
+
+
+/* v61 targeted fix only: make nationwide authority and recent install ticker clearly visible */
+.hero{
+  position:relative!important;
+}
+.heroCopy{
+  position:relative!important;
+  z-index:5!important;
+}
+.heroAuthorityPanel{
+  margin-top:22px;
+  display:grid;
+  grid-template-columns:170px minmax(0,1fr);
+  gap:16px;
+  align-items:stretch;
+  max-width:880px;
+}
+.authorityStampVisible{
+  background:
+    radial-gradient(circle at 50% 50%,rgba(255,253,248,.98) 0 57%,transparent 58%),
+    conic-gradient(from 0deg,#c4a05c,#ead08e,#c4a05c,#94743d,#c4a05c);
+  border:5px solid rgba(255,253,248,.95);
+  box-shadow:0 18px 40px rgba(0,0,0,.20);
+  width:170px;
+  height:170px;
+  border-radius:999px;
+  display:grid;
+  place-items:center;
+  text-align:center;
+  position:relative;
+}
+.authorityStampVisible:before{
+  content:"";
+  position:absolute;
+  inset:13px;
+  border-radius:999px;
+  border:2px dashed #c4a05c;
+}
+.authorityStampVisible strong{
+  position:relative;
+  display:block;
+  color:var(--green);
+  font-family:Georgia,serif;
+  font-size:22px;
+  line-height:.95;
+}
+.authorityStampVisible span{
+  position:relative;
+  display:block;
+  color:#6c5428;
+  font-size:10px;
+  letter-spacing:.13em;
+  text-transform:uppercase;
+  font-weight:900;
+  margin-top:7px;
+}
+.installTickerVisible{
+  background:rgba(255,253,248,.96);
+  border:1px solid rgba(234,208,142,.62);
+  border-radius:20px;
+  padding:14px;
+  box-shadow:0 22px 48px rgba(0,0,0,.18);
+  cursor:pointer;
+  min-height:170px;
+}
+.installTickerVisible:hover{
+  transform:translateY(-2px);
+  transition:.18s ease;
+}
+.installTickerVisible .tickerTop{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  margin-bottom:9px;
+}
+.installTickerVisible .tickerTop b{
+  color:var(--green);
+  font-size:13px;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.installTickerVisible .tickerTop span{
+  color:#94743d;
+  font-size:12px;
+  font-weight:900;
+}
+.installTickerVisible .tickerMain{
+  display:grid;
+  grid-template-columns:92px 1fr;
+  gap:13px;
+  align-items:center;
+}
+.installTickerVisible img{
+  width:92px;
+  height:82px;
+  border-radius:14px;
+  object-fit:cover;
+  background:#f3eadb;
+}
+.installTickerVisible h3{
+  font-size:25px;
+  line-height:1;
+  margin:0;
+}
+.installTickerVisible p{
+  color:#5f6c65;
+  font-size:13px;
+  margin-top:5px;
+}
+.installTickerVisible small{
+  display:block;
+  color:var(--green);
+  margin-top:7px;
+  font-weight:900;
+}
+.homeNationwideLine{
+  display:inline-flex!important;
+  align-items:center;
+  gap:9px;
+  margin-top:20px;
+  color:#ead08e;
+  background:rgba(255,255,255,.08);
+  border:1px solid rgba(234,208,142,.22);
+  border-radius:999px;
+  padding:10px 14px;
+  font-weight:850;
+}
+.homeNationwideLine i{
+  font-style:normal;
+  width:26px;
+  height:26px;
+  border-radius:999px;
+  background:#ead08e;
+  color:var(--green);
+  display:grid;
+  place-items:center;
+  font-weight:950;
+}
+.nationwideStamp,
+.heroInstallTicker{
+  display:none!important;
+}
+@media(max-width:980px){
+  .heroAuthorityPanel{
+    grid-template-columns:1fr;
+  }
+  .authorityStampVisible{
+    width:138px;
+    height:138px;
+    margin:auto;
+  }
+  .authorityStampVisible strong{font-size:18px}
+  .authorityStampVisible span{font-size:8px}
+  .installTickerVisible .tickerMain{
+    grid-template-columns:78px 1fr;
+  }
+}
+
 </style>
+
+<link rel="canonical" href="https://churchillmemorials.co.uk/">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
+<meta name="description" content="Nationwide memorial headstone specialists. Cemetery headstones, kerb sets, book memorials, heart memorials and professional installation across England, Scotland and Wales.">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "LocalBusiness", "name": "Churchill Memorials", "url": "https://churchillmemorials.co.uk/", "telephone": "0126 820 8559", "email": "info@churchillmemorials.com", "address": {"@type": "PostalAddress", "streetAddress": "Unit 16, Dorewards Hall, Dorewards Chase", "addressLocality": "Braintree", "addressRegion": "Essex", "postalCode": "CM7 5LS", "addressCountry": "GB"}, "areaServed": ["England", "Scotland", "Wales"], "description": "Nationwide memorial headstone specialists providing professional installation across England, Scotland and Wales."}</script>
+
 </head>
 <body>
 <div class="topbar"><span>0126 820 8559</span><span><b>Nationwide memorial headstone specialists</b> · England, Scotland & Wales · Professional installation included</span><span>Hassle-free quotes · No hidden costs · Aftercare support</span></div>
@@ -3063,7 +3480,7 @@ img[loading="lazy"]{
     <div class="heroText">
       <div class="label">Nationwide service, local care and pricing</div>
       <h1>Headstones,<br><span>memorials and gravestones.</span></h1>
-      <p>Premium headstones, kerb sets and bespoke memorials with full product imagery, live guide prices and a clear quotation journey built around trust.</p>
+      <p>Premium headstones, kerb sets and bespoke memorials with full product imagery, live guide prices and a clear quotation journey built around trust.</p><div class="homeNationwideLine"><i>✓</i> We operate in every cemetery across England, Scotland and Wales</div>
       <div class="heroActions"><button class="btn gold" onclick="go('range')">Explore Memorial Range</button><button class="btn outline" onclick="go('offers')">View Special Offers</button></div>
       <div class="trustRow">
         <div class="trustPill"><i>✓</i><b>30 Year</b><span>Structural Guarantee</span></div>
@@ -3089,6 +3506,51 @@ img[loading="lazy"]{
   </div>
   <section class="section"><div class="sectionHead"><div><div class="label" style="color:#94743d">Browse by memorial type</div><h2>Memorial Range</h2></div><p>Full desktop browsing with all 13 live memorial categories, real product images, search, filters and product galleries.</p></div><div class="categoryGrid" id="categoryGrid"></div><div class="categoryAuditNote">All categories from the live shop/category CSV are shown here. Use the range filters to view every product in each category.</div></section>
   <section class="section" style="padding-top:0"><div class="sectionHead"><h2>Featured Special Offers</h2><p>Selected live products from the CSV with special offer pricing.</p></div><div class="productGrid" id="homeOffers"></div></section>
+
+  <section class="homeProofSection">
+    <div class="homeProofHead">
+      <div>
+        <div class="label" style="color:#94743d">Proof & trust</div>
+        <h2>Recent Installations</h2>
+      </div>
+      <p>See real memorial work, genuine family feedback and professional reassurance from Churchill Memorials’ governing trade body.</p>
+    </div>
+
+    <div class="homeProofGrid">
+      <article class="proofCard">
+        <img class="proofImage" src="churchill_v59_assets/recent-installations.png" alt="Recent Churchill Memorials headstone installations in UK cemeteries" title="Recent Churchill Memorials installations" loading="lazy" decoding="async">
+        <div class="proofCardText">
+          <h3>Installed nationwide</h3>
+          <p>Recent memorial installations across cemeteries in England, Scotland and Wales.</p>
+        </div>
+      </article>
+
+      <article class="proofCard reviewProofWrap">
+        <img class="proofImage contain" src="churchill_v59_assets/customer-reviews.png" alt="Five star Google customer reviews for Churchill Memorials" title="Churchill Memorials five star reviews" loading="lazy" decoding="async">
+        <div class="proofCardText">
+          <h3>5-star family reviews</h3>
+          <p>Families trust Churchill Memorials for clear communication, professional installation and compassionate service.</p>
+        </div>
+      </article>
+
+      <article class="proofCard">
+        <div class="nammProof">
+          <img src="churchill_v59_assets/namm-registered.png" alt="NAMM RQMF registered memorial mason badge for Churchill Memorials" title="NAMM registered memorial mason" loading="lazy" decoding="async">
+        </div>
+        <div class="proofCardText">
+          <h3>NAMM Registered</h3>
+          <p>NAMM is the governing trade body for qualified memorial masons, giving families professional reassurance.</p>
+        </div>
+      </article>
+    </div>
+
+    <div class="proofBadgeLine">
+      <div><b>5.0 Google Rating</b><span>Based on family reviews</span></div>
+      <div><b>NAMM Registered</b><span>Professional memorial masonry standards</span></div>
+      <div><b>Nationwide Installation</b><span>England, Scotland and Wales</span></div>
+    </div>
+  </section>
+
 </section>
 
 <section class="page" id="page-offers">
@@ -3244,6 +3706,38 @@ function money(n){
 function go(id){document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));document.getElementById('page-'+id).classList.add('active');document.querySelectorAll('[data-page]').forEach(b=>b.classList.toggle('active',b.dataset.page===id)); if(id==='range')renderProducts(); if(id==='offers')renderOffers(); window.scrollTo({top:0,behavior:'smooth'})}
 function img(p){return p.image||''}
 function productCard(p,i){let sale=p.sale&&p.price;return `<article class="productCard"><button class="productImage" onclick="openProduct(${i})"><img src="${img(p)}" alt="${p.seoAlt||p.name}" title="${p.genericImageUrl?(p.seoTitle||p.name):''}" loading="lazy" decoding="async" onerror="this.style.display='none'"><span class="tag">${p.categoryLabel}</span>${sale?'<span class="sale">20% OFF</span>':''}</button><div class="productBody"><div class="sku">${p.sku?'SKU: '+p.sku:'Reference on request'}</div><h3>${p.name}</h3><p>${p.description}</p><div class="priceBox"><small>${sale?'Limited offer installed from':'Guide price installed from'}</small><strong class="${p.price?'':'guideQuoteText'}">${p.price?money(p.price):'Ask for quote'}</strong><span>${sale?'Was '+money(p.was)+' · save '+money(p.was-p.price):(p.price?'Free no-obligation quote':'Price confirmed by advisor')}</span></div><div class="cardActions"><button class="btn primary" onclick="openProduct(${i},'quick')">View & request quote</button></div></div></article>`}
+
+const recentInstalls=[
+  {location:'Hampstead London Cemetery', type:'Avon grey kerbset with coverslab', match:'kerb', note:'Recently installed in London'},
+  {location:'City of London Cemetery', type:'Karin grey ogee top with vase plate', match:'ogee', note:'Real cemetery installation'},
+  {location:'Bocking Braintree Cemetery', type:'Black granite square top lawn memorial', match:'black granite', note:'Local Essex installation'},
+  {location:'North Watford Cemetery', type:'Black ogee top lawn memorial', match:'ogee', note:'Installed by Churchill Memorials'}
+];
+let installTickerIndex=0;
+function findInstallProduct(install){
+  const q=(install.match||'').toLowerCase();
+  let idx=P.findIndex(p=>[p.name,p.oldName,p.description,p.categoryLabel,p.material].join(' ').toLowerCase().includes(q));
+  if(idx<0) idx=0;
+  return idx;
+}
+function renderInstallTicker(){
+  const targets=[document.getElementById('installTickerVisible'),document.getElementById('heroInstallTicker')].filter(Boolean);
+  if(!targets.length) return;
+  const install=recentInstalls[installTickerIndex%recentInstalls.length];
+  const productIndex=findInstallProduct(install);
+  const product=P[productIndex]||P[0];
+  const markup=`<div class="tickerTop"><b>Recent installation</b><span>${installTickerIndex%recentInstalls.length+1}/${recentInstalls.length}</span></div>
+    <div class="tickerMain">
+      <img src="${product.image||''}" alt="${install.location} recent Churchill Memorials installation" title="${install.location} memorial installation" loading="lazy" decoding="async">
+      <div><h3>${install.location}</h3><p>${install.type}</p><small>Click to view a similar memorial →</small></div>
+    </div>`;
+  targets.forEach(el=>{el.innerHTML=markup;el.onclick=()=>openProduct(productIndex,'quick');});
+}
+function startInstallTicker(){
+  renderInstallTicker();
+  setInterval(()=>{installTickerIndex++;renderInstallTicker();},4200);
+}
+
 function renderCategories(){let html=C.map(c=>{let p=P.find(x=>x.category===c&&x.image)||P.find(x=>x.category===c)||P[0];let n=P.filter(x=>x.category===c).length;return `<button class="categoryCard" onclick="setCat('${c}');go('range')"><div class="categoryImage"><img src="${img(p)}" alt="${CL[c]} memorial category with Churchill Memorials headstones" title="${CL[c]} memorial category" loading="lazy" decoding="async"></div><div class="categoryBody"><h3>${CL[c]}</h3><p>${n} memorials · ${CB[c]||''}</p></div></button>`}).join('');document.getElementById('categoryGrid').innerHTML=html}
 function renderOffers(){document.getElementById('offerProducts').innerHTML=P.filter(p=>p.sale).map((p)=>productCard(p,P.indexOf(p))).join('');document.getElementById('offerHeroImg').src=img(P.find(p=>p.sale&&p.image)||P[0])}
 function renderHome(){document.getElementById('heroImg').src=img(P.find(p=>p.image)||P[0]);document.getElementById('homeOffers').innerHTML=P.filter(p=>p.sale).slice(0,4).map(p=>productCard(p,P.indexOf(p))).join('')}
@@ -3567,9 +4061,269 @@ function prevBuilderStep(){
 }
 function showInfo(id){document.querySelectorAll('.infoPage').forEach(p=>p.classList.remove('active'));document.getElementById('info-'+id).classList.add('active');document.querySelectorAll('[data-info]').forEach(b=>b.classList.toggle('active',b.dataset.info===id))}
 document.getElementById('productModal').addEventListener('click',e=>{if(e.target.id==='productModal')closeModal()});
-renderCategories();renderHome();renderOffers();renderProducts();go('home');
+renderCategories();renderHome();renderOffers();renderProducts();startInstallTicker();go('home');
 
 document.getElementById('builderColourModal')?.addEventListener('click',e=>{if(e.target.id==='builderColourModal')closeBuilderColourModal()});
 </script>
+<noscript><section class="section"><h2>Crawlable Memorial Range</h2><p>Static product and category links for search engines and non-JavaScript visitors.</p><ul>
+<li><a href="/memorial-range/arabic-and-muslim-memorial-headstones/">Arabic &amp; Muslim Memorial Headstones</a></li>
+<li><a href="/memorial-range/bespoke-kerbset-memorials/">Bespoke Kerbset Memorials</a></li>
+<li><a href="/memorial-range/book-memorials/">Book Memorials</a></li>
+<li><a href="/memorial-range/cemetery-and-churchyard-headstones/">Cemetery &amp; Churchyard Headstones</a></li>
+<li><a href="/memorial-range/children-s-memorials/">Children’s Memorials</a></li>
+<li><a href="/memorial-range/churchyard-and-marble-memorials/">Churchyard &amp; Marble Memorials</a></li>
+<li><a href="/memorial-range/cremation-memorials/">Cremation Memorials</a></li>
+<li><a href="/memorial-range/heart-memorials/">Heart Memorials</a></li>
+<li><a href="/memorial-range/individual-bespoke-memorials/">Individual Bespoke Memorials</a></li>
+<li><a href="/memorial-range/kerb-set-memorials-and-full-length-headstones/">Kerb Set Memorials &amp; Full Length Headstones</a></li>
+<li><a href="/memorial-range/rustic-and-hand-carved-memorials/">Rustic &amp; Hand Carved Memorials</a></li>
+<li><a href="/memorial-range/special-offers/">Special Offers</a></li>
+<li><a href="/memorial-range/vases/">Vases</a></li>
+</ul><h2>Memorial Products</h2><ul>
+<li><a href="/product/grace-stone/">Grace Stone</a> — £1,414</li>
+<li><a href="/product/peace-stone/">Peace Stone</a> — £1,678</li>
+<li><a href="/product/quiet-grace/">Quiet Grace</a> — £1,518</li>
+<li><a href="/product/sacred-cross/">Sacred Cross</a> — £1,375</li>
+<li><a href="/product/heart-grace/">Heart Grace</a> — £1,375</li>
+<li><a href="/product/love-heart/">Love Heart</a> — £1,562</li>
+<li><a href="/product/lily-grace/">Lily Grace</a> — Price on request</li>
+<li><a href="/product/soft-grace/">Soft Grace</a> — Price on request</li>
+<li><a href="/product/rose-grace/">Rose Grace</a> — Price on request</li>
+<li><a href="/product/rose-heart/">Rose Heart</a> — Price on request</li>
+<li><a href="/product/eternal-grace/">Eternal Grace</a> — Price on request</li>
+<li><a href="/product/rose-light/">Rose Light</a> — Price on request</li>
+<li><a href="/product/garden-rose/">Garden Rose</a> — Price on request</li>
+<li><a href="/product/gentle-grace/">Gentle Grace</a> — Price on request</li>
+<li><a href="/product/faith-cross/">Faith Cross</a> — Price on request</li>
+<li><a href="/product/soft-rose/">Soft Rose</a> — Price on request</li>
+<li><a href="/product/memory-stone/">Memory Stone</a> — Price on request</li>
+<li><a href="/product/holy-grace/">Holy Grace</a> — £1,225</li>
+<li><a href="/product/daisy-grace/">Daisy Grace</a> — £1,485</li>
+<li><a href="/product/heritage-stone/">Heritage Stone</a> — Price on request</li>
+<li><a href="/product/peace-cross/">Peace Cross</a> — £1,424</li>
+<li><a href="/product/mary-grace/">Mary Grace</a> — £1,848</li>
+<li><a href="/product/grace-cross/">Grace Cross</a> — Price on request</li>
+<li><a href="/product/angel-cross/">Angel Cross</a> — Price on request</li>
+<li><a href="/product/prayer-cross/">Prayer Cross</a> — Price on request</li>
+<li><a href="/product/hope-cross/">Hope Cross</a> — Price on request</li>
+<li><a href="/product/blessed-cross/">Blessed Cross</a> — Price on request</li>
+<li><a href="/product/memory-book/">Memory Book</a> — Price on request</li>
+<li><a href="/product/saint-grace/">Saint Grace</a> — Price on request</li>
+<li><a href="/product/heaven-cross/">Heaven Cross</a> — Price on request</li>
+<li><a href="/product/divine-peace/">Divine Peace</a> — Price on request</li>
+<li><a href="/product/remembrance-vase/">Remembrance Vase</a> — Price on request</li>
+<li><a href="/product/dove-grace/">Dove Grace</a> — Price on request</li>
+<li><a href="/product/chapel-cross/">Chapel Cross</a> — Price on request</li>
+<li><a href="/product/dove-heart/">Dove Heart</a> — Price on request</li>
+<li><a href="/product/eternal-heart/">Eternal Heart</a> — Price on request</li>
+<li><a href="/product/mercy-cross/">Mercy Cross</a> — Price on request</li>
+<li><a href="/product/light-cross/">Light Cross</a> — Price on request</li>
+<li><a href="/product/eternal-cross/">Eternal Cross</a> — Price on request</li>
+<li><a href="/product/lily-cross/">Lily Cross</a> — Price on request</li>
+<li><a href="/product/rose-cross/">Rose Cross</a> — Price on request</li>
+<li><a href="/product/celtic-cross/">Celtic Cross</a> — Price on request</li>
+<li><a href="/product/angel-heart/">Angel Heart</a> — Price on request</li>
+<li><a href="/product/grace-vase/">Grace Vase</a> — Price on request</li>
+<li><a href="/product/rose-vase/">Rose Vase</a> — Price on request</li>
+<li><a href="/product/serene-stone/">Serene Stone</a> — £1,864</li>
+<li><a href="/product/lily-light/">Lily Light</a> — Price on request</li>
+<li><a href="/product/willow-grace/">Willow Grace</a> — Price on request</li>
+<li><a href="/product/cedar-grace/">Cedar Grace</a> — Price on request</li>
+<li><a href="/product/peace-vase/">Peace Vase</a> — Price on request</li>
+<li><a href="/product/meadow-grace/">Meadow Grace</a> — Price on request</li>
+<li><a href="/product/pearl-grace/">Pearl Grace</a> — Price on request</li>
+<li><a href="/product/golden-grace/">Golden Grace</a> — Price on request</li>
+<li><a href="/product/silver-grace/">Silver Grace</a> — Price on request</li>
+<li><a href="/product/morning-grace/">Morning Grace</a> — Price on request</li>
+<li><a href="/product/still-grace/">Still Grace</a> — Price on request</li>
+<li><a href="/product/gentle-heart/">Gentle Heart</a> — £1,754</li>
+<li><a href="/product/garden-rest/">Garden Rest</a> — Price on request</li>
+<li><a href="/product/dove-vase/">Dove Vase</a> — Price on request</li>
+<li><a href="/product/peace-garden/">Peace Garden</a> — Price on request</li>
+<li><a href="/product/rose-garden/">Rose Garden</a> — Price on request</li>
+<li><a href="/product/grace-book/">Grace Book</a> — Price on request</li>
+<li><a href="/product/tiny-angel/">Tiny Angel</a> — Price on request</li>
+<li><a href="/product/legacy-garden/">Legacy Garden</a> — Price on request</li>
+<li><a href="/product/soft-angel/">Soft Angel</a> — Price on request</li>
+<li><a href="/product/grace-garden/">Grace Garden</a> — Price on request</li>
+<li><a href="/product/serene-garden/">Serene Garden</a> — Price on request</li>
+<li><a href="/product/evergreen-rest/">Evergreen Rest</a> — Price on request</li>
+<li><a href="/product/quiet-garden/">Quiet Garden</a> — Price on request</li>
+<li><a href="/product/willow-garden/">Willow Garden</a> — Price on request</li>
+<li><a href="/product/meadow-rest/">Meadow Rest</a> — Price on request</li>
+<li><a href="/product/heritage-garden/">Heritage Garden</a> — Price on request</li>
+<li><a href="/product/sanctuary-rest/">Sanctuary Rest</a> — £6,545</li>
+<li><a href="/product/peace-book/">Peace Book</a> — £5,335</li>
+<li><a href="/product/legacy-book/">Legacy Book</a> — Price on request</li>
+<li><a href="/product/family-garden/">Family Garden</a> — Price on request</li>
+<li><a href="/product/memory-garden/">Memory Garden</a> — Price on request</li>
+<li><a href="/product/cedar-rest/">Cedar Rest</a> — Price on request</li>
+<li><a href="/product/dove-garden/">Dove Garden</a> — Price on request</li>
+<li><a href="/product/ivy-rest/">Ivy Rest</a> — £5,445</li>
+<li><a href="/product/oak-garden/">Oak Garden</a> — £5,274</li>
+<li><a href="/product/stone-garden/">Stone Garden</a> — £4,774</li>
+<li><a href="/product/pearl-garden/">Pearl Garden</a> — £5,247</li>
+<li><a href="/product/haven-rest/">Haven Rest</a> — £6,545</li>
+<li><a href="/product/eden-garden/">Eden Garden</a> — £4,592</li>
+<li><a href="/product/noble-rest/">Noble Rest</a> — £4,202</li>
+<li><a href="/product/crown-garden/">Crown Garden</a> — £5,665</li>
+<li><a href="/product/bloom-rest/">Bloom Rest</a> — £7,645</li>
+<li><a href="/product/laurel-garden/">Laurel Garden</a> — £5,088</li>
+<li><a href="/product/calm-garden/">Calm Garden</a> — £5,005</li>
+<li><a href="/product/faith-grace/">Faith Grace</a> — Price on request</li>
+<li><a href="/product/salaam-grace/">Salaam Grace</a> — Price on request</li>
+<li><a href="/product/noor-grace/">Noor Grace</a> — Price on request</li>
+<li><a href="/product/sabr-grace/">Sabr Grace</a> — £4,565</li>
+<li><a href="/product/mercy-grace/">Mercy Grace</a> — £1,424</li>
+<li><a href="/product/peace-prayer/">Peace Prayer</a> — £4,394</li>
+<li><a href="/product/sacred-prayer/">Sacred Prayer</a> — £4,394</li>
+<li><a href="/product/faith-stone/">Faith Stone</a> — £4,675</li>
+<li><a href="/product/noor-stone/">Noor Stone</a> — £4,895</li>
+<li><a href="/product/salaam-stone/">Salaam Stone</a> — £5,142</li>
+<li><a href="/product/gentle-prayer/">Gentle Prayer</a> — £4,614</li>
+<li><a href="/product/blessed-prayer/">Blessed Prayer</a> — £4,235</li>
+<li><a href="/product/eternal-prayer/">Eternal Prayer</a> — £4,394</li>
+<li><a href="/product/hope-prayer/">Hope Prayer</a> — £4,345</li>
+<li><a href="/product/family-prayer/">Family Prayer</a> — £1,265</li>
+<li><a href="/product/dove-prayer/">Dove Prayer</a> — £1,534</li>
+<li><a href="/product/love-story/">Love Story</a> — £2,145</li>
+<li><a href="/product/family-book/">Family Book</a> — £2,194</li>
+<li><a href="/product/rose-verse/">Rose Verse</a> — £2,948</li>
+<li><a href="/product/quiet-verse/">Quiet Verse</a> — £1,815</li>
+<li><a href="/product/eternal-verse/">Eternal Verse</a> — £1,864</li>
+<li><a href="/product/heart-book/">Heart Book</a> — £1,864</li>
+<li><a href="/product/life-story/">Life Story</a> — £3,294</li>
+<li><a href="/product/golden-verse/">Golden Verse</a> — £1,754</li>
+<li><a href="/product/remembrance-book/">Remembrance Book</a> — £1,864</li>
+<li><a href="/product/sacred-book/">Sacred Book</a> — £1,562</li>
+<li><a href="/product/chapter-rose/">Chapter Rose</a> — £1,644</li>
+<li><a href="/product/tender-verse/">Tender Verse</a> — £1,485</li>
+<li><a href="/product/faith-book/">Faith Book</a> — Price on request</li>
+<li><a href="/product/willow-verse/">Willow Verse</a> — Price on request</li>
+<li><a href="/product/little-star/">Little Star</a> — £874</li>
+<li><a href="/product/sweet-dream/">Sweet Dream</a> — £2,634</li>
+<li><a href="/product/gentle-star/">Gentle Star</a> — £2,805</li>
+<li><a href="/product/little-dove/">Little Dove</a> — £1,656</li>
+<li><a href="/product/baby-rose/">Baby Rose</a> — £962</li>
+<li><a href="/product/tender-heart/">Tender Heart</a> — £979</li>
+<li><a href="/product/little-lily/">Little Lily</a> — £1,788</li>
+<li><a href="/product/precious-star/">Precious Star</a> — £3,294</li>
+<li><a href="/product/angel-teddy/">Angel Teddy</a> — £1,424</li>
+<li><a href="/product/little-moon/">Little Moon</a> — £1,265</li>
+<li><a href="/product/sweet-meadow/">Sweet Meadow</a> — Price on request</li>
+<li><a href="/product/tiny-rose/">Tiny Rose</a> — Price on request</li>
+<li><a href="/product/gentle-moon/">Gentle Moon</a> — Price on request</li>
+<li><a href="/product/little-rainbow/">Little Rainbow</a> — Price on request</li>
+<li><a href="/product/soft-star/">Soft Star</a> — Price on request</li>
+<li><a href="/product/precious-dove/">Precious Dove</a> — Price on request</li>
+<li><a href="/product/baby-angel/">Baby Angel</a> — Price on request</li>
+<li><a href="/product/tender-star/">Tender Star</a> — Price on request</li>
+<li><a href="/product/noble-grace/">Noble Grace</a> — Price on request</li>
+<li><a href="/product/calm-stone/">Calm Stone</a> — Price on request</li>
+<li><a href="/product/hope-stone/">Hope Stone</a> — £1,854</li>
+<li><a href="/product/forever-grace/">Forever Grace</a> — Price on request</li>
+<li><a href="/product/true-grace/">True Grace</a> — Price on request</li>
+<li><a href="/product/loving-grace/">Loving Grace</a> — Price on request</li>
+<li><a href="/product/family-grace/">Family Grace</a> — Price on request</li>
+<li><a href="/product/restful-stone/">Restful Stone</a> — Price on request</li>
+<li><a href="/product/kindred-grace/">Kindred Grace</a> — Price on request</li>
+<li><a href="/product/ever-grace/">Ever Grace</a> — Price on request</li>
+<li><a href="/product/haven-stone/">Haven Stone</a> — Price on request</li>
+<li><a href="/product/eden-grace/">Eden Grace</a> — £2,310</li>
+<li><a href="/product/garden-vase/">Garden Vase</a> — £1,375</li>
+<li><a href="/product/laurel-grace/">Laurel Grace</a> — £1,815</li>
+<li><a href="/product/crown-stone/">Crown Stone</a> — £1,314</li>
+<li><a href="/product/bloom-stone/">Bloom Stone</a> — £1,370</li>
+<li><a href="/product/vista-grace/">Vista Grace</a> — £1,177</li>
+<li><a href="/product/river-grace/">River Grace</a> — £1,314</li>
+<li><a href="/product/moon-grace/">Moon Grace</a> — £3,850</li>
+<li><a href="/product/star-grace/">Star Grace</a> — £1,314</li>
+<li><a href="/product/cloud-grace/">Cloud Grace</a> — £1,644</li>
+<li><a href="/product/oak-grace/">Oak Grace</a> — £2,816</li>
+<li><a href="/product/fern-stone/">Fern Stone</a> — £3,850</li>
+<li><a href="/product/peace-dove/">Peace Dove</a> — £1,644</li>
+<li><a href="/product/ivy-grace/">Ivy Grace</a> — Price on request</li>
+<li><a href="/product/vale-stone/">Vale Stone</a> — Price on request</li>
+<li><a href="/product/dove-book/">Dove Book</a> — Price on request</li>
+<li><a href="/product/amber-grace/">Amber Grace</a> — Price on request</li>
+<li><a href="/product/opal-grace/">Opal Grace</a> — Price on request</li>
+<li><a href="/product/hope-verse/">Hope Verse</a> — Price on request</li>
+<li><a href="/product/memory-vase/">Memory Vase</a> — £1,012</li>
+<li><a href="/product/jade-grace/">Jade Grace</a> — £676</li>
+<li><a href="/product/lily-vase/">Lily Vase</a> — £984</li>
+<li><a href="/product/quiet-vase/">Quiet Vase</a> — £1,018</li>
+<li><a href="/product/forever-vase/">Forever Vase</a> — £1,018</li>
+<li><a href="/product/ruby-grace/">Ruby Grace</a> — £1,050</li>
+<li><a href="/product/emerald-grace/">Emerald Grace</a> — £1,072</li>
+<li><a href="/product/ivory-grace/">Ivory Grace</a> — £1,084</li>
+<li><a href="/product/bloom-vase/">Bloom Vase</a> — £1,094</li>
+<li><a href="/product/pearl-vase/">Pearl Vase</a> — £1,128</li>
+<li><a href="/product/ivy-vase/">Ivy Vase</a> — £1,094</li>
+<li><a href="/product/willow-vase/">Willow Vase</a> — Price on request</li>
+<li><a href="/product/tender-vase/">Tender Vase</a> — Price on request</li>
+<li><a href="/product/sable-grace/">Sable Grace</a> — Price on request</li>
+<li><a href="/product/dawn-stone/">Dawn Stone</a> — Price on request</li>
+<li><a href="/product/evening-grace/">Evening Grace</a> — Price on request</li>
+<li><a href="/product/soft-light/">Soft Light</a> — Price on request</li>
+<li><a href="/product/peace-heart/">Peace Heart</a> — Price on request</li>
+<li><a href="/product/lily-heart/">Lily Heart</a> — £2,964</li>
+<li><a href="/product/golden-heart/">Golden Heart</a> — £1,898</li>
+<li><a href="/product/sweet-heart/">Sweet Heart</a> — £1,672</li>
+<li><a href="/product/forever-heart/">Forever Heart</a> — £1,644</li>
+<li><a href="/product/willow-heart/">Willow Heart</a> — £1,534</li>
+<li><a href="/product/faith-heart/">Faith Heart</a> — £1,672</li>
+<li><a href="/product/ruby-heart/">Ruby Heart</a> — £1,974</li>
+<li><a href="/product/memory-heart/">Memory Heart</a> — £3,025</li>
+<li><a href="/product/quiet-heart/">Quiet Heart</a> — £1,859</li>
+<li><a href="/product/grace-heart/">Grace Heart</a> — £1,595</li>
+<li><a href="/product/true-heart/">True Heart</a> — Price on request</li>
+<li><a href="/product/soft-heart/">Soft Heart</a> — Price on request</li>
+<li><a href="/product/quiet-light/">Quiet Light</a> — £1,925</li>
+<li><a href="/product/gentle-light/">Gentle Light</a> — £1,925</li>
+<li><a href="/product/memory-light/">Memory Light</a> — £2,585</li>
+<li><a href="/product/peace-light/">Peace Light</a> — £2,172</li>
+<li><a href="/product/grace-light/">Grace Light</a> — £3,074</li>
+<li><a href="/product/still-light/">Still Light</a> — £3,284</li>
+<li><a href="/product/forever-light/">Forever Light</a> — £2,976</li>
+<li><a href="/product/golden-light/">Golden Light</a> — £2,805</li>
+<li><a href="/product/silver-light/">Silver Light</a> — £3,355</li>
+<li><a href="/product/hope-light/">Hope Light</a> — £3,410</li>
+<li><a href="/product/orchid-grace/">Orchid Grace</a> — £2,541</li>
+<li><a href="/product/family-light/">Family Light</a> — £2,326</li>
+<li><a href="/product/kind-light/">Kind Light</a> — £4,191</li>
+<li><a href="/product/calm-light/">Calm Light</a> — £1,925</li>
+<li><a href="/product/heritage-grace/">Heritage Grace</a> — Price on request</li>
+<li><a href="/product/tender-grace/">Tender Grace</a> — Price on request</li>
+<li><a href="/product/blessed-grace/">Blessed Grace</a> — Price on request</li>
+<li><a href="/product/sacred-grace/">Sacred Grace</a> — Price on request</li>
+<li><a href="/product/grace-rose/">Grace Rose</a> — Price on request</li>
+<li><a href="/product/grace-rest/">Grace Rest</a> — Price on request</li>
+<li><a href="/product/grace-dove/">Grace Dove</a> — Price on request</li>
+<li><a href="/product/grace-lily/">Grace Lily</a> — £1,595</li>
+<li><a href="/product/rustic-grace/">Rustic Grace</a> — £1,595</li>
+<li><a href="/product/natural-grace/">Natural Grace</a> — £1,562</li>
+<li><a href="/product/willow-stone/">Willow Stone</a> — £1,452</li>
+<li><a href="/product/oak-stone/">Oak Stone</a> — £1,534</li>
+<li><a href="/product/cedar-stone/">Cedar Stone</a> — £1,562</li>
+<li><a href="/product/meadow-stone/">Meadow Stone</a> — £1,452</li>
+<li><a href="/product/country-grace/">Country Grace</a> — £1,342</li>
+<li><a href="/product/field-stone/">Field Stone</a> — £1,424</li>
+<li><a href="/product/river-stone/">River Stone</a> — £1,705</li>
+<li><a href="/product/forest-grace/">Forest Grace</a> — £2,744</li>
+<li><a href="/product/grace-peace/">Grace Peace</a> — £3,624</li>
+<li><a href="/product/woodland-stone/">Woodland Stone</a> — Price on request</li>
+<li><a href="/product/quiet-oak/">Quiet Oak</a> — Price on request</li>
+<li><a href="/product/silver-rest/">Silver Rest</a> — £3,575</li>
+<li><a href="/product/soft-willow/">Soft Willow</a> — Price on request</li>
+<li><a href="/product/grace-hope/">Grace Hope</a> — £205</li>
+<li><a href="/product/grace-memory/">Grace Memory</a> — £195</li>
+<li><a href="/product/grace-legacy/">Grace Legacy</a> — £146</li>
+<li><a href="/product/grace-star/">Grace Star</a> — £515</li>
+<li><a href="/product/grace-moon/">Grace Moon</a> — £170</li>
+<li><a href="/product/grace-meadow/">Grace Meadow</a> — £350</li>
+<li><a href="/product/grace-willow/">Grace Willow</a> — £390</li>
+<li><a href="/product/grace-cedar/">Grace Cedar</a> — £340</li>
+<li><a href="/product/grace-oak/">Grace Oak</a> — £395</li>
+</ul></section></noscript>
 </body>
 </html>
