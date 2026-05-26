@@ -1,0 +1,10 @@
+{
+  "version": "v63_full_crawlable_ssr_csr",
+  "source": "churchill_desktop_v61_visible_home_authority_ticker.html",
+  "visible_homepage_preserved": true,
+  "product_pages": 244,
+  "category_pages": 13,
+  "sitemap_urls": 263,
+  "image_sitemap_product_entries": 244,
+  "strategy": "Static HTML pages for Google crawling + existing JavaScript homepage for onsite client-side experience"
+}
